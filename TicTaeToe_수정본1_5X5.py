@@ -70,3 +70,5 @@ while True: # game loop- running forever
     elif is_draw():
         print('its a draw!')
         break 
+
+print("test")
