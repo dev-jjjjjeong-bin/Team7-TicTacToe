@@ -69,4 +69,4 @@ while True: # game loop- running forever
         break
     elif is_draw():
         print('its a draw!')
-        break 
+        break
