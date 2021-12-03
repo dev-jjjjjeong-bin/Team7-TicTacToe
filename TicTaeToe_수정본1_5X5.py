@@ -13,7 +13,7 @@ def print_board():
     print(row3)
     print(row4)
     print(row5)
-    print()
+    print() 
       
 def player_move(icon):
     if  icon == "X":
