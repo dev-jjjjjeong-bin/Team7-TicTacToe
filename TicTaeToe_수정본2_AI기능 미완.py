@@ -63,11 +63,9 @@ def Cpu_move(board):
         copy = Board_copy(board)
         
         if Blank(copy, i):
-            
             Board_update(copy, i, 'X')
             
             if is_victory(copy, 'X'):
-                
                 return i
             
     for i in range(0, 24):
@@ -75,21 +73,17 @@ def Cpu_move(board):
         copy = Board_copy(board)
         
         if Blank(copy, i):
-            
             Board_update(copy, i, 'O')
-            
-            if is_victory(copy, 'O'):
-                
+    
+            if is_victory(copy, 'O'): 
                 return i
             
     point = Cpu_moveRandom(board, [0,2,4,6,8,10,12,14,16,18,20,22,24])
     
     if point != None:
-        
         return point
     
     elif board[12] == ' ':
-        
         return 12
 
     return Cpu_moveRandom(board, [1,3,5,7,9,11,13,15,17,19,21,23])
