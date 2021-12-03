@@ -1,4 +1,7 @@
-from tictactoe import*
+import tictactoe3x3
+import tictactoe3x3AI
+import tictactoe5x5
+import tictactoe5x5AI
 
 def lobby():
     print("-----------------------")
@@ -31,19 +34,20 @@ def game_lobby():
     menu = input("선택지를 입력하세요")
     if (menu == "1"):
         #print("1테스트")
-        game_start()
+        tictactoe3x3AI.game_start()
     elif (menu == "2"):
         #print("2테스트")
-        game_start()
+        tictactoe3x3.game_start()
     elif (menu == "3"):
         #print("3테스트")
-        game_start()
+        tictactoe5x5AI.game_start()
     elif (menu == "4"):
         #print("4테스트")
-        game_start()
+        tictactoe5x5.game_start()
     else:
         print("올바르지 않은 입력입니다.")
         game_lobby()
+    
         
 def game_expalnation():
     print("-----------------------")
@@ -53,3 +57,8 @@ def game_expalnation():
     lobby()
         
 lobby()
+
+
+
+
+
