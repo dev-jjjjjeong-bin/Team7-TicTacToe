@@ -51,22 +51,23 @@ def is_draw():
         return True
     else:
         return False
-        
-while True: # game loop- running forever
-    print_board()
-    player_move('X')
-    print_board()
-    if is_victory("X"):
-        print('X Wins! Congratulations!')
-        break
-    elif is_draw():
-        print('its a draw!')
-        break
-    player_move('O')
-    if is_victory("O"):
+
+def game_start():
+    while True: # game loop- running forever
         print_board()
-        print('O Wins! Congratulations!')
-        break
-    elif is_draw():
-        print('its a draw!')
-        break
+        player_move('X')
+        print_board()
+        if is_victory("X"):
+            print('X Wins! Congratulations!')
+            break
+        elif is_draw():
+            print('its a draw!')
+            break
+        player_move('O')
+        if is_victory("O"):
+            print_board()
+            print('O Wins! Congratulations!')
+            break
+        elif is_draw():
+            print('its a draw!')
+            break
