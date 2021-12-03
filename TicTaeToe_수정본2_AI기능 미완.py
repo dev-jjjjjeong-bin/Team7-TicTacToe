@@ -36,7 +36,7 @@ def User_move(icon):
     print("Your turn to move player")
     choice = int(input("Enter your move (1-25)").strip())
 
-#   choice=int(input('enter your move (1-25)').strip())
+#choice=int(input('enter your move (1-25)').strip())
     if board[choice-1] == " ": # if user type the same number 
         board[choice-1] = icon
     else:
@@ -121,7 +121,7 @@ def is_draw():
         return True
     else:
         return False
-        
+
 while True: # game loop- running forever
     print_board()
     User_move('X')
