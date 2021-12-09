@@ -1,5 +1,7 @@
 # Team7-TicTacToe
 
+프로그램 실행 과정
+
 4가지 게임 선택지 중 택1
 1. 3X3 and 1 player
 2. 3X3 and 2 player
