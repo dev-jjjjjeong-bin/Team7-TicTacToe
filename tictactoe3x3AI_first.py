@@ -1,0 +1,78 @@
+import random
+
+board =[" "for i in range(9)]
+
+def print_board():
+    row1 = '|{}|{}|{}|'.format(board[0],board[1],board[2]) 
+    row2 = '|{}|{}|{}|'.format(board[3],board[4],board[5]) 
+    row3 = '|{}|{}|{}|'.format(board[6],board[7],board[8])
+
+    print()
+    print(row1)
+    print(row2)
+    print(row3)
+    print()
+
+def Cpu_move(icon):
+    if icon == "O":
+        number = 1
+    choiceCpu=Cpu_select(board)
+    if board[choiceCpu] == " ":
+        print('Turn of computer {}'.format(number))
+        board[choiceCpu] = icon
+    else:
+        Cpu_move(icon)
+
+def Cpu_select(board):
+    return random.randrange(0,9)
+
+def User_move(icon):
+    if icon == "X":
+        number = 1
+    print('Your turn player {}'.format(number))
+    choice=int(input('enter your move (1-9)').strip())
+    if board[choice-1] == " ": # if user type the same number 
+        board[choice-1] = icon
+    else:
+        print()      
+        print( ' That space is taken ')
+        
+def is_victory(icon):        
+    if(board[0]== icon and board[1]==icon and board[2]==icon) or\
+      (board[3]== icon and board[4]==icon and board[5]==icon) or\
+      (board[6]== icon and board[7]==icon and board[8]==icon) or\
+      (board[0]== icon and board[3]==icon and board[6]==icon) or\
+      (board[1]== icon and board[4]==icon and board[7]==icon) or\
+      (board[2]== icon and board[5]==icon and board[8]==icon) or\
+      (board[0]== icon and board[4]==icon and board[8]==icon) or\
+      (board[2]== icon and board[4]==icon and board[6]==icon):
+        return True
+    else:
+        return False
+
+def is_draw():
+    if ' ' not in board:
+        return True
+    else:
+        return False
+
+def game_start():
+    print("게임을 시작합니다.")    
+    while True: # game loop- running forever
+        print_board()
+        Cpu_move('O')
+        print_board()
+        if is_victory("O"):
+            print_board()
+            print('O Wins! Congratulations!')
+            break
+        elif is_draw():
+            print('its a draw!')
+            break
+        User_move('X')
+        if is_victory("X"):
+            print('X Wins! Congratulations!')
+            break
+        elif is_draw():
+            print('its a draw!')
+            break
