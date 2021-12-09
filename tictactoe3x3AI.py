@@ -26,10 +26,10 @@ def User_move(icon):
 
 def Cpu_move(icon):
     if icon == "O":
-        number = 2
+        number = 1
     choiceCpu=Cpu_select(board)
     if board[choiceCpu] == " ":
-        print('Turn of player {}'.format(number))
+        print('Turn of computer {}'.format(number))
         board[choiceCpu] = icon
     else:
         Cpu_move(icon)
