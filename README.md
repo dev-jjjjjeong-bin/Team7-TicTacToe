@@ -10,5 +10,5 @@
 
 1가지 게임을 선택하면 그에 맞는 게임 룰이 제시된다.
 
-1 player를 선택한 경우 computer vs player 게임 모드이므로 player가 선공을 할지 후공을 할지 정할 수 있는 선택지가 제공된 후 게임이 시작된다.
+1 player를 선택한 경우 computer vs player 게임 모드이므로 player가 선공, 후공에 대한 선택지가 제공된 후 게임이 시작된다.
 2 player를 선택한 경우는 바로 게임이 시작된다.
